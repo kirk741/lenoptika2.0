@@ -1,0 +1,19 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-box);
+  height: var(--icon-box);
+  color: inherit;
+}
+
+.icon svg {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  display: block;
+}
+
+.lg svg {
+  width: var(--icon-box);
+  height: var(--icon-box);
+}

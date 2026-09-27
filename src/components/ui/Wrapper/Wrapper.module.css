@@ -1,0 +1,6 @@
+.wrapper {
+  width: 100%;
+  min-height: 120vh;
+  margin: 0 auto;
+  padding: var(--header-height) var(--pad-x) 0;
+}

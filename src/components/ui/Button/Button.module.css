@@ -1,0 +1,71 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--btn-height);
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  white-space: nowrap;
+  transition: color var(--duration);
+}
+
+.ghost {
+  height: var(--btn-height);
+}
+
+.ghost::before {
+  content: "";
+  position: absolute;
+  inset: 8px 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  background: var(--color-card);
+  transition: border-color var(--duration), background-color var(--duration);
+}
+
+.ghost:hover::before {
+  border-color: var(--color-btn-hover);
+}
+
+.ghost:hover {
+  color: var(--color-btn-hover);
+}
+
+.ghost > span,
+.primary > span,
+.outline > span {
+  position: relative;
+  padding: 0 var(--btn-padding);
+}
+
+.primary,
+.outline {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  transition: background-color var(--duration), border-color var(--duration), color var(--duration);
+}
+
+.primary {
+  background: var(--color-btn);
+  color: var(--color-text-inverse);
+}
+
+.primary:hover {
+  background: var(--color-btn-hover);
+}
+
+.outline {
+  border: 2px solid var(--color-btn);
+  color: var(--color-btn);
+}
+
+.outline:hover {
+  border-color: var(--color-btn-hover);
+  color: var(--color-btn-hover);
+}

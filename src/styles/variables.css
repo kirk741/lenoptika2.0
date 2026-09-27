@@ -1,0 +1,48 @@
+:root {
+  --font-size: 16px;
+  --font-size-title: 16px;
+  --font: "Involve", system-ui, sans-serif;
+  --font-display: "Wadik", "Involve", sans-serif;
+
+  --radius-lg: 16px;
+  --radius-sm: 8px;
+
+  --duration: 0.2s;
+  --duration-slow: 0.3s;
+
+  --btn-height: 48px;
+  --btn-padding: 8px;
+
+  --space: 8px;
+  --space-half: 4px;
+  --pad-x: 16px;
+  --header-height: 80px;
+  --header-height-compact: 48px;
+  --input-height: 32px;
+  --icon-box: 32px;
+  --icon-size: 24px;
+  --logo-width: 152px;
+  --logo-height: 13px;
+
+  --col-half: calc(100% / 2);
+  --col-quarter: calc(100% / 4);
+  --col-eighth: calc(100% / 8);
+
+  --color-bg: #f6f6f6;
+  --color-card: #ffffff;
+  --color-skeleton: #e8e8e8;
+  --color-skeleton-shine: #f4f4f4;
+  --color-accent: #19ba52;
+  --color-text: #333333;
+  --color-text-muted: #a4a4a4;
+  --color-text-inverse: #ffffff;
+  --color-btn: #111111;
+  --color-btn-hover: #19ba52;
+  --color-invalid: #ba191b;
+}
+
+@media (max-width: 1000px) {
+  :root {
+    --header-height: 48px;
+  }
+}

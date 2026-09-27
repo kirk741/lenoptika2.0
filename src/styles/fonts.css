@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Involve";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Involve-Regular.otf") format("otf");
+}
+
+@font-face {
+  font-family: "Wadik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../assets/fonts/Wadik.otf") format("otf");
+}

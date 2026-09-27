@@ -1,0 +1,197 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--space) * 3);
+  width: 100%;
+  min-height: calc(100vh - var(--header-height));
+  padding: calc(var(--space) * 6);
+  background: var(--color-card);
+  border-radius: var(--radius-lg);
+}
+
+.title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+
+.dateField {
+  width: 180px;
+}
+
+.dateField input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+.field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space);
+}
+
+.error {
+  position: absolute;
+  top: calc(100% + var(--space-half));
+  left: 0;
+  font-family: var(--font);
+  font-size: 12px;
+  color: var(--color-invalid);
+  z-index: 1;
+}
+
+.timesInvalid {
+  border-color: var(--color-invalid);
+}
+
+.label {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  color: var(--color-text);
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space);
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+}
+
+.socialBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--btn-height);
+  height: var(--btn-height);
+  cursor: pointer;
+}
+
+.socialBtn input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.socialPlate {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-box);
+  height: var(--icon-box);
+  border-radius: var(--radius-sm);
+  background: var(--color-card);
+  color: var(--color-text-muted);
+  transition: color var(--duration), background-color var(--duration);
+}
+
+.socialPlate svg path {
+  color: inherit;
+}
+
+.socialPlate::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+}
+
+.socialBtn:not(.socialActive):hover .socialPlate::after {
+  border-color: var(--color-accent);
+}
+
+.socialBtn:not(.socialActive):hover .socialPlate svg path {
+  fill: var(--color-text-muted);
+}
+
+.socialBtn.socialActive .socialPlate::after {
+  border-color: var(--color-accent);
+}
+
+.socialBtn.socialActive .socialPlate {
+  color: var(--color-accent);
+}
+
+.contactInput {
+  flex: 1;
+  min-width: 0;
+}
+
+@media (max-width: 1000px) {
+  .form {
+    min-height: auto;
+    padding: calc(var(--space) * 3);
+  }
+}
+
+@media (max-width: 420px) {
+  .contactRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contactInput {
+    width: 100%;
+  }
+
+  .dateField {
+    width: 100%;
+  }
+}
+
+.timesBox {
+  flex: 1;
+  min-height: 200px;
+  overflow-y: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space);
+  align-content: flex-start;
+  padding: var(--space);
+  background: var(--color-bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: border-color var(--duration);
+}
+
+.timesEmpty {
+  font-family: var(--font);
+  font-size: var(--font-size);
+  color: var(--color-text-muted);
+}
+
+.timeBtn {
+  height: var(--input-height);
+  padding: 0 var(--btn-padding);
+  font-family: var(--font);
+  font-size: var(--font-size);
+  color: var(--color-text);
+  background: var(--color-card);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: border-color var(--duration), color var(--duration);
+}
+
+.timeBtn:hover {
+  border-color: var(--color-btn-hover);
+}
+
+.timeActive,
+.timeActive:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.skeletonTime {
+  width: 72px;
+  height: var(--input-height);
+  flex: 0 0 auto;
+  border-radius: var(--radius-sm);
+}

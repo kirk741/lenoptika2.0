@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  font-size: var(--font-size);
+  -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input,
+textarea,
+select {
+  color: inherit;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  font-family: var(--font);
+  line-height: 1.15;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+path {
+  color: var(--color-text);
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  color: var(--color-text-muted);
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: inherit;
+  color: var(--color-text);
+  font-size: var(--font-size);
+}
